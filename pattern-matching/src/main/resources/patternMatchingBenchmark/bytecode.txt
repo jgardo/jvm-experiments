@@ -1,0 +1,404 @@
+Classfile /Users/jakub.gardo/repo/experiments/target/classes/dev/jgardo/PatternMatchingBenchmark.class
+  Last modified 30 Sept 2023; size 2565 bytes
+  SHA-256 checksum 1d56e798d8d7029a482827919ed31f93c0154c2dddb5129d0a31612e3e1c43e4
+  Compiled from "PatternMatchingBenchmark.java"
+public class dev.jgardo.PatternMatchingBenchmark
+  minor version: 0
+  major version: 65
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #32                         // dev/jgardo/PatternMatchingBenchmark
+  super_class: #2                         // java/lang/Object
+  interfaces: 0, fields: 1, methods: 3, attributes: 4
+Constant pool:
+    #1 = Methodref          #2.#3         // java/lang/Object."<init>":()V
+    #2 = Class              #4            // java/lang/Object
+    #3 = NameAndType        #5:#6         // "<init>":()V
+    #4 = Utf8               java/lang/Object
+    #5 = Utf8               <init>
+    #6 = Utf8               ()V
+    #7 = Methodref          #8.#9         // java/lang/Long.valueOf:(J)Ljava/lang/Long;
+    #8 = Class              #10           // java/lang/Long
+    #9 = NameAndType        #11:#12       // valueOf:(J)Ljava/lang/Long;
+   #10 = Utf8               java/lang/Long
+   #11 = Utf8               valueOf
+   #12 = Utf8               (J)Ljava/lang/Long;
+   #13 = Long               10l
+   #15 = Long               4l
+   #17 = Long               2l
+   #19 = Long               7l
+   #21 = Long               8l
+   #23 = Long               3l
+   #25 = Long               9l
+   #27 = Long               5l
+   #29 = Long               6l
+   #31 = Fieldref           #32.#33       // dev/jgardo/PatternMatchingBenchmark.objects:[Ljava/lang/Object;
+   #32 = Class              #34           // dev/jgardo/PatternMatchingBenchmark
+   #33 = NameAndType        #35:#36       // objects:[Ljava/lang/Object;
+   #34 = Utf8               dev/jgardo/PatternMatchingBenchmark
+   #35 = Utf8               objects
+   #36 = Utf8               [Ljava/lang/Object;
+   #37 = Methodref          #8.#38        // java/lang/Long.longValue:()J
+   #38 = NameAndType        #39:#40       // longValue:()J
+   #39 = Utf8               longValue
+   #40 = Utf8               ()J
+   #41 = Methodref          #42.#43       // org/openjdk/jmh/infra/Blackhole.consume:(Z)V
+   #42 = Class              #44           // org/openjdk/jmh/infra/Blackhole
+   #43 = NameAndType        #45:#46       // consume:(Z)V
+   #44 = Utf8               org/openjdk/jmh/infra/Blackhole
+   #45 = Utf8               consume
+   #46 = Utf8               (Z)V
+   #47 = Methodref          #48.#49       // java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+   #48 = Class              #50           // java/util/Objects
+   #49 = NameAndType        #51:#52       // requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+   #50 = Utf8               java/util/Objects
+   #51 = Utf8               requireNonNull
+   #52 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+   #53 = InvokeDynamic      #0:#54        // #0:typeSwitch:(Ljava/lang/Object;I)I
+   #54 = NameAndType        #55:#56       // typeSwitch:(Ljava/lang/Object;I)I
+   #55 = Utf8               typeSwitch
+   #56 = Utf8               (Ljava/lang/Object;I)I
+   #57 = Utf8               Code
+   #58 = Utf8               LineNumberTable
+   #59 = Utf8               LocalVariableTable
+   #60 = Utf8               this
+   #61 = Utf8               Ldev/jgardo/PatternMatchingBenchmark;
+   #62 = Utf8               ifElse
+   #63 = Utf8               (Lorg/openjdk/jmh/infra/Blackhole;)V
+   #64 = Utf8               l
+   #65 = Utf8               Ljava/lang/Long;
+   #66 = Utf8               object
+   #67 = Utf8               Ljava/lang/Object;
+   #68 = Utf8               bh
+   #69 = Utf8               Lorg/openjdk/jmh/infra/Blackhole;
+   #70 = Utf8               StackMapTable
+   #71 = Class              #36           // "[Ljava/lang/Object;"
+   #72 = Utf8               RuntimeVisibleAnnotations
+   #73 = Utf8               Lorg/openjdk/jmh/annotations/Benchmark;
+   #74 = Utf8               Lorg/openjdk/jmh/annotations/CompilerControl;
+   #75 = Utf8               value
+   #76 = Utf8               Lorg/openjdk/jmh/annotations/CompilerControl$Mode;
+   #77 = Utf8               EXCLUDE
+   #78 = Utf8               Lorg/openjdk/jmh/annotations/Warmup;
+   #79 = Utf8               iterations
+   #80 = Integer            3
+   #81 = Utf8               time
+   #82 = Integer            1
+   #83 = Utf8               Lorg/openjdk/jmh/annotations/Measurement;
+   #84 = Integer            10
+   #85 = Utf8               Lorg/openjdk/jmh/annotations/Fork;
+   #86 = Utf8               patternMatching
+   #87 = Utf8               SourceFile
+   #88 = Utf8               PatternMatchingBenchmark.java
+   #89 = Utf8               Lorg/openjdk/jmh/annotations/State;
+   #90 = Utf8               Lorg/openjdk/jmh/annotations/Scope;
+   #91 = Utf8               Benchmark
+   #92 = Utf8               BootstrapMethods
+   #93 = MethodHandle       6:#94         // REF_invokeStatic java/lang/runtime/SwitchBootstraps.typeSwitch:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #94 = Methodref          #95.#96       // java/lang/runtime/SwitchBootstraps.typeSwitch:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #95 = Class              #97           // java/lang/runtime/SwitchBootstraps
+   #96 = NameAndType        #55:#98       // typeSwitch:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #97 = Utf8               java/lang/runtime/SwitchBootstraps
+   #98 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #99 = Utf8               InnerClasses
+  #100 = Class              #101          // org/openjdk/jmh/annotations/CompilerControl$Mode
+  #101 = Utf8               org/openjdk/jmh/annotations/CompilerControl$Mode
+  #102 = Class              #103          // org/openjdk/jmh/annotations/CompilerControl
+  #103 = Utf8               org/openjdk/jmh/annotations/CompilerControl
+  #104 = Utf8               Mode
+  #105 = Class              #106          // java/lang/invoke/MethodHandles$Lookup
+  #106 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #107 = Class              #108          // java/lang/invoke/MethodHandles
+  #108 = Utf8               java/lang/invoke/MethodHandles
+  #109 = Utf8               Lookup
+{
+  private java.lang.Object[] objects;
+    descriptor: [Ljava/lang/Object;
+    flags: (0x0002) ACC_PRIVATE
+
+  public dev.jgardo.PatternMatchingBenchmark();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=6, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: bipush        10
+         7: anewarray     #2                  // class java/lang/Object
+        10: dup
+        11: iconst_0
+        12: lconst_1
+        13: invokestatic  #7                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        16: aastore
+        17: dup
+        18: iconst_1
+        19: ldc2_w        #13                 // long 10l
+        22: invokestatic  #7                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        25: aastore
+        26: dup
+        27: iconst_2
+        28: ldc2_w        #15                 // long 4l
+        31: invokestatic  #7                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        34: aastore
+        35: dup
+        36: iconst_3
+        37: ldc2_w        #17                 // long 2l
+        40: invokestatic  #7                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        43: aastore
+        44: dup
+        45: iconst_4
+        46: ldc2_w        #19                 // long 7l
+        49: invokestatic  #7                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        52: aastore
+        53: dup
+        54: iconst_5
+        55: ldc2_w        #21                 // long 8l
+        58: invokestatic  #7                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        61: aastore
+        62: dup
+        63: bipush        6
+        65: ldc2_w        #23                 // long 3l
+        68: invokestatic  #7                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        71: aastore
+        72: dup
+        73: bipush        7
+        75: ldc2_w        #25                 // long 9l
+        78: invokestatic  #7                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        81: aastore
+        82: dup
+        83: bipush        8
+        85: ldc2_w        #27                 // long 5l
+        88: invokestatic  #7                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        91: aastore
+        92: dup
+        93: bipush        9
+        95: ldc2_w        #29                 // long 6l
+        98: invokestatic  #7                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       101: aastore
+       102: putfield      #31                 // Field objects:[Ljava/lang/Object;
+       105: return
+      LineNumberTable:
+        line 44: 0
+        line 46: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     106     0  this   Ldev/jgardo/PatternMatchingBenchmark;
+
+  public void ifElse(org.openjdk.jmh.infra.Blackhole);
+    descriptor: (Lorg/openjdk/jmh/infra/Blackhole;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=7, args_size=2
+         0: aload_0
+         1: getfield      #31                 // Field objects:[Ljava/lang/Object;
+         4: astore_2
+         5: aload_2
+         6: arraylength
+         7: istore_3
+         8: iconst_0
+         9: istore        4
+        11: iload         4
+        13: iload_3
+        14: if_icmpge     69
+        17: aload_2
+        18: iload         4
+        20: aaload
+        21: astore        5
+        23: aload         5
+        25: instanceof    #8                  // class java/lang/Long
+        28: ifeq          63
+        31: aload         5
+        33: checkcast     #8                  // class java/lang/Long
+        36: astore        6
+        38: aload         6
+        40: invokevirtual #37                 // Method java/lang/Long.longValue:()J
+        43: ldc2_w        #27                 // long 5l
+        46: lcmp
+        47: ifle          58
+        50: aload_1
+        51: iconst_1
+        52: invokevirtual #41                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Z)V
+        55: goto          63
+        58: aload_1
+        59: iconst_0
+        60: invokevirtual #41                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Z)V
+        63: iinc          4, 1
+        66: goto          11
+        69: return
+      LineNumberTable:
+        line 53: 0
+        line 54: 23
+        line 55: 38
+        line 56: 50
+        line 58: 58
+        line 53: 63
+        line 62: 69
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           38      25     6     l   Ljava/lang/Long;
+           23      40     5 object   Ljava/lang/Object;
+            0      70     0  this   Ldev/jgardo/PatternMatchingBenchmark;
+            0      70     1    bh   Lorg/openjdk/jmh/infra/Blackhole;
+      StackMapTable: number_of_entries = 4
+        frame_type = 254 /* append */
+          offset_delta = 11
+          locals = [ class "[Ljava/lang/Object;", int, int ]
+        frame_type = 253 /* append */
+          offset_delta = 46
+          locals = [ class java/lang/Object, class java/lang/Long ]
+        frame_type = 249 /* chop */
+          offset_delta = 4
+        frame_type = 248 /* chop */
+          offset_delta = 5
+    RuntimeVisibleAnnotations:
+      0: #73()
+        org.openjdk.jmh.annotations.Benchmark
+      1: #74(#75=e#76.#77)
+        org.openjdk.jmh.annotations.CompilerControl(
+          value=Lorg/openjdk/jmh/annotations/CompilerControl$Mode;.EXCLUDE
+        )
+      2: #78(#79=I#80,#81=I#82)
+        org.openjdk.jmh.annotations.Warmup(
+          iterations=3
+          time=1
+        )
+      3: #83(#79=I#84,#81=I#82)
+        org.openjdk.jmh.annotations.Measurement(
+          iterations=10
+          time=1
+        )
+      4: #85(#75=I#82)
+        org.openjdk.jmh.annotations.Fork(
+          value=1
+        )
+
+  public void patternMatching(org.openjdk.jmh.infra.Blackhole);
+    descriptor: (Lorg/openjdk/jmh/infra/Blackhole;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=10, args_size=2
+         0: aload_0
+         1: getfield      #31                 // Field objects:[Ljava/lang/Object;
+         4: astore_2
+         5: aload_2
+         6: arraylength
+         7: istore_3
+         8: iconst_0
+         9: istore        4
+        11: iload         4
+        13: iload_3
+        14: if_icmpge     129
+        17: aload_2
+        18: iload         4
+        20: aaload
+        21: astore        5
+        23: aload         5
+        25: dup
+        26: invokestatic  #47                 // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+        29: pop
+        30: astore        6
+        32: iconst_0
+        33: istore        7
+        35: aload         6
+        37: iload         7
+        39: invokedynamic #53,  0             // InvokeDynamic #0:typeSwitch:(Ljava/lang/Object;I)I
+        44: lookupswitch  { // 2
+                       0: 72
+                       1: 105
+                 default: 120
+            }
+        72: aload         6
+        74: checkcast     #8                  // class java/lang/Long
+        77: astore        8
+        79: aload         8
+        81: invokevirtual #37                 // Method java/lang/Long.longValue:()J
+        84: ldc2_w        #27                 // long 5l
+        87: lcmp
+        88: ifgt          97
+        91: iconst_1
+        92: istore        7
+        94: goto          35
+        97: aload_1
+        98: iconst_1
+        99: invokevirtual #41                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Z)V
+       102: goto          123
+       105: aload         6
+       107: checkcast     #8                  // class java/lang/Long
+       110: astore        9
+       112: aload_1
+       113: iconst_0
+       114: invokevirtual #41                 // Method org/openjdk/jmh/infra/Blackhole.consume:(Z)V
+       117: goto          123
+       120: goto          123
+       123: iinc          4, 1
+       126: goto          11
+       129: return
+      LineNumberTable:
+        line 70: 0
+        line 71: 23
+        line 72: 72
+        line 73: 105
+        line 74: 120
+        line 70: 123
+        line 77: 129
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           79      26     8     l   Ljava/lang/Long;
+          112       8     9     l   Ljava/lang/Long;
+           23     100     5 object   Ljava/lang/Object;
+            0     130     0  this   Ldev/jgardo/PatternMatchingBenchmark;
+            0     130     1    bh   Lorg/openjdk/jmh/infra/Blackhole;
+      StackMapTable: number_of_entries = 8
+        frame_type = 254 /* append */
+          offset_delta = 11
+          locals = [ class "[Ljava/lang/Object;", int, int ]
+        frame_type = 254 /* append */
+          offset_delta = 23
+          locals = [ class java/lang/Object, class java/lang/Object, int ]
+        frame_type = 36 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 24
+          locals = [ class java/lang/Long ]
+        frame_type = 250 /* chop */
+          offset_delta = 7
+        frame_type = 14 /* same */
+        frame_type = 248 /* chop */
+          offset_delta = 2
+        frame_type = 248 /* chop */
+          offset_delta = 5
+    RuntimeVisibleAnnotations:
+      0: #73()
+        org.openjdk.jmh.annotations.Benchmark
+      1: #74(#75=e#76.#77)
+        org.openjdk.jmh.annotations.CompilerControl(
+          value=Lorg/openjdk/jmh/annotations/CompilerControl$Mode;.EXCLUDE
+        )
+      2: #78(#79=I#80,#81=I#82)
+        org.openjdk.jmh.annotations.Warmup(
+          iterations=3
+          time=1
+        )
+      3: #83(#79=I#84,#81=I#82)
+        org.openjdk.jmh.annotations.Measurement(
+          iterations=10
+          time=1
+        )
+      4: #85(#75=I#82)
+        org.openjdk.jmh.annotations.Fork(
+          value=1
+        )
+}
+SourceFile: "PatternMatchingBenchmark.java"
+RuntimeVisibleAnnotations:
+  0: #89(#75=e#90.#91)
+    org.openjdk.jmh.annotations.State(
+      value=Lorg/openjdk/jmh/annotations/Scope;.Benchmark
+    )
+BootstrapMethods:
+  0: #93 REF_invokeStatic java/lang/runtime/SwitchBootstraps.typeSwitch:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #8 java/lang/Long
+      #8 java/lang/Long
+InnerClasses:
+  public static final #104= #100 of #102; // Mode=class org/openjdk/jmh/annotations/CompilerControl$Mode of class org/openjdk/jmh/annotations/CompilerControl
+  public static final #109= #105 of #107; // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
