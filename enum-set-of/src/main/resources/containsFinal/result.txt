@@ -1,0 +1,23 @@
+Benchmark                                             Mode  Cnt          Score          Error  Units
+EnumSetOfContainsBenchmark.containsEnumSetV001       thrpt   10  777118944.410 ±  6360457.065  ops/s
+EnumSetOfContainsBenchmark.containsEnumSetV002       thrpt   10  758005633.596 ± 46088791.631  ops/s
+EnumSetOfContainsBenchmark.containsEnumSetV003       thrpt   10  773934213.769 ±  8197894.201  ops/s
+EnumSetOfContainsBenchmark.containsEnumSetV004       thrpt   10  775281406.624 ±  4905190.428  ops/s
+EnumSetOfContainsBenchmark.containsEnumSetV008       thrpt   10  778163874.133 ±  3895144.756  ops/s
+EnumSetOfContainsBenchmark.containsEnumSetV016       thrpt   10  775958340.377 ±  3182587.569  ops/s
+EnumSetOfContainsBenchmark.containsEnumSetV032       thrpt   10  777388526.985 ±  3219899.946  ops/s
+EnumSetOfContainsBenchmark.containsEnumSetV064       thrpt   10  777047020.296 ±  3322941.300  ops/s
+EnumSetOfContainsBenchmark.containsEnumSetV065       thrpt   10  555360145.875 ±  1503068.424  ops/s
+EnumSetOfContainsBenchmark.containsEnumSetV128       thrpt   10  555574979.975 ±  2876255.100  ops/s
+EnumSetOfContainsBenchmark.containsSetOfV001         thrpt   10  971253092.319 ±  6388559.675  ops/s
+EnumSetOfContainsBenchmark.containsSetOfV002         thrpt   10  648152119.151 ±  3795321.277  ops/s
+EnumSetOfContainsBenchmark.containsSetOfV003         thrpt   10  278337745.294 ±   802707.047  ops/s
+EnumSetOfContainsBenchmark.containsSetOfV004         thrpt   10  229306069.270 ±   539952.097  ops/s
+EnumSetOfContainsBenchmark.containsSetOfV008         thrpt   10  228597812.421 ±  3630747.877  ops/s
+EnumSetOfContainsBenchmark.containsSetOfV016         thrpt   10  278389026.641 ±   707985.995  ops/s
+EnumSetOfContainsBenchmark.containsSetOfV032         thrpt   10  259750603.252 ±  4545163.520  ops/s
+EnumSetOfContainsBenchmark.containsSetOfV064         thrpt   10  278046959.715 ±   734277.787  ops/s
+EnumSetOfContainsBenchmark.containsSetOfV065         thrpt   10  229306397.295 ±   526086.072  ops/s
+EnumSetOfContainsBenchmark.containsSetOfV128         thrpt   10  229332197.163 ±   421942.828  ops/s
+EnumSetOfContainsBenchmark.emptyContainsEnumSetV001  thrpt   10  777598342.601 ±  3816183.282  ops/s
+EnumSetOfContainsBenchmark.emptyContainsSetOfV001    thrpt   10  973042827.315 ±  4162043.239  ops/s
