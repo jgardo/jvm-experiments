@@ -22,211 +22,311 @@ public class EnumSetOfContainsAllBenchmark {
     @State(Scope.Thread)
     public static class EmptyState {
         public Set<V1> value = Set.of();
+        public Set<V1> enumSet = EnumSet.noneOf(V1.class);
     }
 
     private static final EnumSet<V1> EMPTY_ENUM_SET_V1 = EnumSet.noneOf(V1.class);
     private static final Set<V1> EMPTY_SET_OF_V1 = Set.of();
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
     public void emptyContainsEnumSetV001(EmptyState state, Blackhole bh) {
+        bh.consume(EMPTY_ENUM_SET_V1.containsAll(state.enumSet));
+    }
+
+    @Benchmark
+    public void emptyContainsSetOfV001(EmptyState state, Blackhole bh) {
+        bh.consume(EMPTY_SET_OF_V1.containsAll(state.value));
+    }
+
+    @Benchmark
+    public void crossContainsEnumSetV001(EmptyState state, Blackhole bh) {
         bh.consume(EMPTY_ENUM_SET_V1.containsAll(state.value));
     }
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
-    public void emptyContainsSetOfV001(EmptyState state, Blackhole bh) {
-        bh.consume(EMPTY_SET_OF_V1.containsAll(state.value));
+    public void crossContainsSetOfV001(EmptyState state, Blackhole bh) {
+        bh.consume(EMPTY_SET_OF_V1.containsAll(state.enumSet));
     }
 
     @State(Scope.Thread)
     public static class V1State {
         public Set<V1> value = Set.of(V1.values());
+        public Set<V1> enumSet = EnumSet.allOf(V1.class);
     }
 
     private static final EnumSet<V1> ENUM_SET_V1 = EnumSet.allOf(V1.class);
     private static final Set<V1> SET_OF_V1 = Set.of(V1.values());
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
     public void containsEnumSetV001(V1State state, Blackhole bh) {
+        bh.consume(ENUM_SET_V1.containsAll(state.enumSet));
+    }
+
+    @Benchmark
+    public void containsSetOfV001(V1State state, Blackhole bh) {
+        bh.consume(SET_OF_V1.containsAll(state.value));
+    }
+
+    @Benchmark
+    public void crossEnumSetV001(V1State state, Blackhole bh) {
         bh.consume(ENUM_SET_V1.containsAll(state.value));
     }
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
-    public void containsSetOfV001(V1State state, Blackhole bh) {
-        bh.consume(SET_OF_V1.containsAll(state.value));
+    public void crossSetOfV001(V1State state, Blackhole bh) {
+        bh.consume(SET_OF_V1.containsAll(state.enumSet));
     }
+
     @State(Scope.Thread)
     public static class V2State {
         public Set<V2> value = Set.of(V2.values());
+        public Set<V2> enumSet = EnumSet.allOf(V2.class);
     }
 
     private static final EnumSet<V2> ENUM_SET_V2 = EnumSet.allOf(V2.class);
     private static final Set<V2> SET_OF_V2 = Set.of(V2.values());
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
     public void containsEnumSetV002(V2State state, Blackhole bh) {
+        bh.consume(ENUM_SET_V2.containsAll(state.enumSet));
+    }
+
+    @Benchmark
+    public void containsSetOfV002(V2State state, Blackhole bh) {
+        bh.consume(SET_OF_V2.containsAll(state.value));
+    }
+
+    @Benchmark
+    public void crossEnumSetV002(V2State state, Blackhole bh) {
         bh.consume(ENUM_SET_V2.containsAll(state.value));
     }
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
-    public void containsSetOfV002(V2State state, Blackhole bh) {
-        bh.consume(SET_OF_V2.containsAll(state.value));
+    public void crossSetOfV002(V2State state, Blackhole bh) {
+        bh.consume(SET_OF_V2.containsAll(state.enumSet));
     }
     @State(Scope.Thread)
     public static class V3State {
         public Set<V3> value = Set.of(V3.values());
+        public Set<V3> enumSet = EnumSet.allOf(V3.class);
     }
 
     private static final EnumSet<V3> ENUM_SET_V3 = EnumSet.allOf(V3.class);
     private static final Set<V3> SET_OF_V3 = Set.of(V3.values());
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
     public void containsEnumSetV003(V3State state, Blackhole bh) {
+        bh.consume(ENUM_SET_V3.containsAll(state.enumSet));
+    }
+
+    @Benchmark
+    public void containsSetOfV003(V3State state, Blackhole bh) {
+        bh.consume(SET_OF_V3.containsAll(state.value));
+    }
+
+    @Benchmark
+    public void crossEnumSetV003(V3State state, Blackhole bh) {
         bh.consume(ENUM_SET_V3.containsAll(state.value));
     }
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
-    public void containsSetOfV003(V3State state, Blackhole bh) {
-        bh.consume(SET_OF_V3.containsAll(state.value));
+    public void crossSetOfV003(V3State state, Blackhole bh) {
+        bh.consume(SET_OF_V3.containsAll(state.enumSet));
     }
     @State(Scope.Thread)
     public static class V4State {
         public Set<V4> value = Set.of(V4.values());
+        public Set<V4> enumSet = EnumSet.allOf(V4.class);
     }
     private static final EnumSet<V4> ENUM_SET_V4 = EnumSet.allOf(V4.class);
     private static final Set<V4> SET_OF_V4 = Set.of(V4.values());
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
     public void containsEnumSetV004(V4State state, Blackhole bh) {
+        bh.consume(ENUM_SET_V4.containsAll(state.enumSet));
+    }
+
+    @Benchmark
+    public void containsSetOfV004(V4State state, Blackhole bh) {
+        bh.consume(SET_OF_V4.containsAll(state.value));
+    }
+
+    @Benchmark
+    public void crossEnumSetV004(V4State state, Blackhole bh) {
         bh.consume(ENUM_SET_V4.containsAll(state.value));
     }
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
-    public void containsSetOfV004(V4State state, Blackhole bh) {
-        bh.consume(SET_OF_V4.containsAll(state.value));
+    public void crossSetOfV004(V4State state, Blackhole bh) {
+        bh.consume(SET_OF_V4.containsAll(state.enumSet));
     }
     @State(Scope.Thread)
     public static class V8State {
         public Set<V8> value = Set.of(V8.values());
+        public Set<V8> enumSet = EnumSet.allOf(V8.class);
     }
 
     private static final EnumSet<V8> ENUM_SET_V8 = EnumSet.allOf(V8.class);
     private static final Set<V8> SET_OF_V8 = Set.of(V8.values());
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
     public void containsEnumSetV008(V8State state, Blackhole bh) {
+        bh.consume(ENUM_SET_V8.containsAll(state.enumSet));
+    }
+
+    @Benchmark
+    public void containsSetOfV008(V8State state, Blackhole bh) {
+        bh.consume(SET_OF_V8.containsAll(state.value));
+    }
+
+    @Benchmark
+    public void crossEnumSetV008(V8State state, Blackhole bh) {
         bh.consume(ENUM_SET_V8.containsAll(state.value));
     }
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
-    public void containsSetOfV008(V8State state, Blackhole bh) {
-        bh.consume(SET_OF_V8.containsAll(state.value));
+    public void crossSetOfV008(V8State state, Blackhole bh) {
+        bh.consume(SET_OF_V8.containsAll(state.enumSet));
     }
     @State(Scope.Thread)
     public static class V16State {
         public Set<V16> value = Set.of(V16.values());
+        public Set<V16> enumSet = EnumSet.allOf(V16.class);
     }
 
     private static final EnumSet<V16> ENUM_SET_V16 = EnumSet.allOf(V16.class);
     private static final Set<V16> SET_OF_V16 = Set.of(V16.values());
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
     public void containsEnumSetV016(V16State state, Blackhole bh) {
+        bh.consume(ENUM_SET_V16.containsAll(state.enumSet));
+    }
+
+    @Benchmark
+    public void containsSetOfV016(V16State state, Blackhole bh) {
+        bh.consume(SET_OF_V16.containsAll(state.value));
+    }
+
+    @Benchmark
+    public void crossEnumSetV016(V16State state, Blackhole bh) {
         bh.consume(ENUM_SET_V16.containsAll(state.value));
     }
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
-    public void containsSetOfV016(V16State state, Blackhole bh) {
-        bh.consume(SET_OF_V16.containsAll(state.value));
+    public void crossSetOfV016(V16State state, Blackhole bh) {
+        bh.consume(SET_OF_V16.containsAll(state.enumSet));
     }
     @State(Scope.Thread)
     public static class V32State {
         public Set<V32> value = Set.of(V32.values());
+        public Set<V32> enumSet = EnumSet.allOf(V32.class);
     }
 
     private static final EnumSet<V32> ENUM_SET_V32 = EnumSet.allOf(V32.class);
     private static final Set<V32> SET_OF_V32 = Set.of(V32.values());
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
     public void containsEnumSetV032(V32State state, Blackhole bh) {
+        bh.consume(ENUM_SET_V32.containsAll(state.enumSet));
+    }
+
+    @Benchmark
+    public void containsSetOfV032(V32State state, Blackhole bh) {
+        bh.consume(SET_OF_V32.containsAll(state.value));
+    }
+
+    @Benchmark
+    public void crossEnumSetV032(V32State state, Blackhole bh) {
         bh.consume(ENUM_SET_V32.containsAll(state.value));
     }
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
-    public void containsSetOfV032(V32State state, Blackhole bh) {
-        bh.consume(SET_OF_V32.containsAll(state.value));
+    public void crossSetOfV032(V32State state, Blackhole bh) {
+        bh.consume(SET_OF_V32.containsAll(state.enumSet));
     }
     @State(Scope.Thread)
     public static class V64State {
         public Set<V64> value = Set.of(V64.values());
+        public Set<V64> enumSet = EnumSet.allOf(V64.class);
     }
 
     private static final EnumSet<V64> ENUM_SET_V64 = EnumSet.allOf(V64.class);
     private static final Set<V64> SET_OF_V64 = Set.of(V64.values());
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
     public void containsEnumSetV064(V64State state, Blackhole bh) {
+        bh.consume(ENUM_SET_V64.containsAll(state.enumSet));
+    }
+
+    @Benchmark
+    public void containsSetOfV064(V64State state, Blackhole bh) {
+        bh.consume(SET_OF_V64.containsAll(state.value));
+    }
+
+    @Benchmark
+    public void crossEnumSetV064(V64State state, Blackhole bh) {
         bh.consume(ENUM_SET_V64.containsAll(state.value));
     }
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
-    public void containsSetOfV064(V64State state, Blackhole bh) {
-        bh.consume(SET_OF_V64.containsAll(state.value));
+    public void crossSetOfV064(V64State state, Blackhole bh) {
+        bh.consume(SET_OF_V64.containsAll(state.enumSet));
     }
     @State(Scope.Thread)
     public static class V65State {
         public Set<V65> value = Set.of(V65.values());
+        public Set<V65> enumSet = EnumSet.allOf(V65.class);
     }
 
     private static final EnumSet<V65> ENUM_SET_V65 = EnumSet.allOf(V65.class);
     private static final Set<V65> SET_OF_V65 = Set.of(V65.values());
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
     public void containsEnumSetV065(V65State state, Blackhole bh) {
+        bh.consume(ENUM_SET_V65.containsAll(state.enumSet));
+    }
+
+    @Benchmark
+    public void containsSetOfV065(V65State state, Blackhole bh) {
+        bh.consume(SET_OF_V65.containsAll(state.value));
+    }
+
+    @Benchmark
+    public void crossEnumSetV065(V65State state, Blackhole bh) {
         bh.consume(ENUM_SET_V65.containsAll(state.value));
     }
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
-    public void containsSetOfV065(V65State state, Blackhole bh) {
-        bh.consume(SET_OF_V65.containsAll(state.value));
+    public void crossSetOfV065(V65State state, Blackhole bh) {
+        bh.consume(SET_OF_V65.containsAll(state.enumSet));
     }
     @State(Scope.Thread)
     public static class V128State {
         public Set<V128> value = Set.of(V128.values());
+        public Set<V128> enumSet = EnumSet.allOf(V128.class);
     }
 
     private static final EnumSet<V128> ENUM_SET_V128 = EnumSet.allOf(V128.class);
     private static final Set<V128> SET_OF_V128 = Set.of(V128.values());
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
     public void containsEnumSetV128(V128State state, Blackhole bh) {
+        bh.consume(ENUM_SET_V128.containsAll(state.enumSet));
+    }
+
+    @Benchmark
+    public void containsSetOfV128(V128State state, Blackhole bh) {
+        bh.consume(SET_OF_V128.containsAll(state.value));
+    }
+
+    @Benchmark
+    public void crossEnumSetV128(V128State state, Blackhole bh) {
         bh.consume(ENUM_SET_V128.containsAll(state.value));
     }
 
     @Benchmark
-    @CompilerControl(CompilerControl.Mode.PRINT)
-    public void containsSetOfV128(V128State state, Blackhole bh) {
-        bh.consume(SET_OF_V128.containsAll(state.value));
+    public void crossSetOfV128(V128State state, Blackhole bh) {
+        bh.consume(SET_OF_V128.containsAll(state.enumSet));
     }
 
     public enum V1 {
