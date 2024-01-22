@@ -30,17 +30,17 @@ public class SizeOfEnumSetOfMain {
     private static final Set<V128> SET_OF_V128 = Set.of(V128.values());
 
     public static void main(String[] args) {
-        System.out.println("EMPTY_ENUM_SET_V1 " + (ClassLayout.parseInstance(EMPTY_ENUM_SET_V1).instanceSize() + ClassLayout.parseInstance(V1.values()).instanceSize()));
-        System.out.println("ENUM_SET_V1 " + (ClassLayout.parseInstance(ENUM_SET_V1).instanceSize() + ClassLayout.parseInstance(V1.values()).instanceSize()));
-        System.out.println("ENUM_SET_V2 " + (ClassLayout.parseInstance(ENUM_SET_V2).instanceSize() + ClassLayout.parseInstance(V2.values()).instanceSize()));
-        System.out.println("ENUM_SET_V3 " + (ClassLayout.parseInstance(ENUM_SET_V3).instanceSize() + ClassLayout.parseInstance(V3.values()).instanceSize()));
-        System.out.println("ENUM_SET_V4 " + (ClassLayout.parseInstance(ENUM_SET_V4).instanceSize() + ClassLayout.parseInstance(V4.values()).instanceSize()));
-        System.out.println("ENUM_SET_V8 " + (ClassLayout.parseInstance(ENUM_SET_V8).instanceSize() + ClassLayout.parseInstance(V8.values()).instanceSize()));
-        System.out.println("ENUM_SET_V16 " + (ClassLayout.parseInstance(ENUM_SET_V16).instanceSize() + ClassLayout.parseInstance(V16.values()).instanceSize()));
-        System.out.println("ENUM_SET_V32 " + (ClassLayout.parseInstance(ENUM_SET_V32).instanceSize() + ClassLayout.parseInstance(V32.values()).instanceSize()));
-        System.out.println("ENUM_SET_V64 " + (ClassLayout.parseInstance(ENUM_SET_V64).instanceSize() + ClassLayout.parseInstance(V64.values()).instanceSize()));
-        System.out.println("ENUM_SET_V65 " + (ClassLayout.parseInstance(ENUM_SET_V65).instanceSize() + ClassLayout.parseInstance(new Long[2]).instanceSize() + ClassLayout.parseInstance(V65.values()).instanceSize()));
-        System.out.println("ENUM_SET_V128 " + (ClassLayout.parseInstance(ENUM_SET_V128).instanceSize() + ClassLayout.parseInstance(new Long[2]).instanceSize() + ClassLayout.parseInstance(V128.values()).instanceSize()));
+        System.out.println("EMPTY_ENUM_SET_V1 " + (ClassLayout.parseInstance(EMPTY_ENUM_SET_V1).instanceSize()));
+        System.out.println("ENUM_SET_V1 " + (ClassLayout.parseInstance(ENUM_SET_V1).instanceSize()));
+        System.out.println("ENUM_SET_V2 " + (ClassLayout.parseInstance(ENUM_SET_V2).instanceSize()));
+        System.out.println("ENUM_SET_V3 " + (ClassLayout.parseInstance(ENUM_SET_V3).instanceSize()));
+        System.out.println("ENUM_SET_V4 " + (ClassLayout.parseInstance(ENUM_SET_V4).instanceSize()));
+        System.out.println("ENUM_SET_V8 " + (ClassLayout.parseInstance(ENUM_SET_V8).instanceSize()));
+        System.out.println("ENUM_SET_V16 " + (ClassLayout.parseInstance(ENUM_SET_V16).instanceSize()));
+        System.out.println("ENUM_SET_V32 " + (ClassLayout.parseInstance(ENUM_SET_V32).instanceSize()));
+        System.out.println("ENUM_SET_V64 " + (ClassLayout.parseInstance(ENUM_SET_V64).instanceSize()));
+        System.out.println("ENUM_SET_V65 " + (ClassLayout.parseInstance(ENUM_SET_V65).instanceSize() + ClassLayout.parseInstance(new Long[2]).instanceSize()));
+        System.out.println("ENUM_SET_V128 " + (ClassLayout.parseInstance(ENUM_SET_V128).instanceSize() + ClassLayout.parseInstance(new Long[2]).instanceSize()));
 
         System.out.println("EMPTY_SET_OF_V1 " + (ClassLayout.parseInstance(EMPTY_SET_OF_V1).instanceSize() + ClassLayout.parseInstance(new Object[0]).instanceSize()));
         System.out.println("SET_OF_V1 " + (ClassLayout.parseInstance(SET_OF_V1).instanceSize()));
